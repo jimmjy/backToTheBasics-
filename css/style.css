@@ -58,6 +58,9 @@ body {
 .heading-primary {
     color: #ffffff;
     text-transform: uppercase;
+
+    /* hide shake at end of animation */
+    backface-visibility: hidden;
 }
 
 .heading-primary-main {
@@ -65,9 +68,7 @@ body {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
-    animation-name: moveInLeft;
-    animation-duration: 2s;
-    animation-timing-function: linear;
+    animation: moveInLeft 2s ease-out;
 }
 
 .heading-primary-sub {
@@ -75,10 +76,7 @@ body {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
-    animation-name: moveInRight;
-    animation-duration: 2s;
-    animation-direction: normal;
-    animation-timing-function: linear;
+    animation: moveInRight 2s ease-out;
 }
 
 @keyframes moveInLeft {
